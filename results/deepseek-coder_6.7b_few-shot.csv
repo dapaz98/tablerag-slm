@@ -1,0 +1,874 @@
+question_id,model_name,prompt_method,question,table_name,columns,prompt,generated_sql,predicted_answer,gold_answer,execution_success,correct,latency_seconds
+nt-2,deepseek-coder:6.7b,few-shot,which team won previous to crettyard?,table_204_772,"['Team', 'County', 'Wins', 'Years_won']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_204_772
+
+Columns:
+Team, County, Wins, Years_won
+
+User question:
+which team won previous to crettyard?
+
+SQL:","SELECT Team 
+FROM table_204_772 
+WHERE County = 'Crettyard' AND Years_won < (SELECT MAX(Years_won) FROM table_204_772 WHERE County = 'Crettyard') 
+ORDER BY Years_won DESC 
+LIMIT 1;",,Wolfe Tones,True,False,25.663244247436523
+nt-3,deepseek-coder:6.7b,few-shot,how many more passengers flew to los angeles than to saskatoon from manzanillo airport in 2013?,table_203_515,"['Rank', 'City', 'Passengers', 'Ranking', 'Airline']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_515
+
+Columns:
+Rank, City, Passengers, Ranking, Airline
+
+User question:
+how many more passengers flew to los angeles than to saskatoon from manzanillo airport in 2013?
+
+SQL:","SELECT (LA.Passengers - SA.Passengers) as Difference
+FROM table_203_515 LA
+JOIN table_203_515 SA ON LA.City = 'Saskatoon' AND SA.City = 'Los Angeles'
+WHERE LA.Airport = 'Manzanillo' AND LA.Year = 2013;",,"12,467",True,False,11.773268222808838
+nt-8,deepseek-coder:6.7b,few-shot,"after winning on four credits with a full house, what is your payout?",table_203_564,"['Hand', '1_credit', '2_credits', '3_credits', '4_credits', '5_credits']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_564
+
+Columns:
+Hand, 1_credit, 2_credits, 3_credits, 4_credits, 5_credits
+
+User question:
+after winning on four credits with a full house, what is your payout?
+
+SQL:",SELECT Hand FROM table_203_564 WHERE `4_credits` = 'Full House';,,32,True,False,4.654587268829346
+nt-9,deepseek-coder:6.7b,few-shot,which players played the same position as ardo kreek?,table_203_116,"['No.', 'Player', 'Birth_Date', 'Weight', 'Height', 'Position', 'Current_Club']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_116
+
+Columns:
+No., Player, Birth_Date, Weight, Height, Position, Current_Club
+
+User question:
+which players played the same position as ardo kreek?
+
+SQL:","SELECT Player 
+FROM table_203_116 
+WHERE Position = (SELECT Position FROM table_203_116 WHERE Player = 'Ardo Kreek');",Ardo Kreek,Siim Ennemuist|Andri Aganits,True,False,6.452881574630737
+nt-14,deepseek-coder:6.7b,few-shot,which athlete was from south korea after the year 2010?,table_203_104,"['Athlete', 'Nation', 'Olympics', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_104
+
+Columns:
+Athlete, Nation, Olympics, Gold, Silver, Bronze, Total
+
+User question:
+which athlete was from south korea after the year 2010?
+
+SQL:","SELECT Athlete
+FROM table_203_104
+WHERE Nation = 'South Korea' AND Olympics > 2010;",,Kim Yu-na,True,False,5.233644247055054
+nt-15,deepseek-coder:6.7b,few-shot,what was the venue when he placed first?,table_204_706,"['Year', 'Competition', 'Venue', 'Position', 'Notes']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_204_706
+
+Columns:
+Year, Competition, Venue, Position, Notes
+
+User question:
+what was the venue when he placed first?
+
+SQL:","SELECT Venue 
+FROM table_204_706 
+WHERE Position = 1;",,"New Delhi, India",True,False,3.8468029499053955
+nt-24,deepseek-coder:6.7b,few-shot,who ranked right after turkey?,table_203_812,"['Rank', 'Nation', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_812
+
+Columns:
+Rank, Nation, Gold, Silver, Bronze, Total
+
+User question:
+who ranked right after turkey?
+
+SQL:","SELECT Nation 
+FROM table_203_812 
+WHERE Rank = (SELECT Rank - 1 FROM table_203_812 WHERE Nation = 'Turkey');",Ukraine,Sweden,True,False,6.398467063903809
+nt-29,deepseek-coder:6.7b,few-shot,what is the total population in dzhebariki-khaya?,table_204_6,"['Urban_settlements', 'Population', 'Male', 'Female', 'Inhabited_localities_in_jurisdiction']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_204_6
+
+Columns:
+Urban_settlements, Population, Male, Female, Inhabited_localities_in_jurisdiction
+
+User question:
+what is the total population in dzhebariki-khaya?
+
+SQL:","SELECT SUM(Population) 
+FROM table_204_6 
+WHERE Urban_settlements = 'Dzhebariki-Khaya';",None,1694,True,False,6.095283269882202
+nt-34,deepseek-coder:6.7b,few-shot,who was the top ranked competitor in this race?,table_204_552,"['Rank', 'Cyclist', 'Team', 'Laps\ndown', 'Notes']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_204_552
+
+Columns:
+Rank, Cyclist, Team, Laps
+down, Notes
+
+User question:
+who was the top ranked competitor in this race?
+
+SQL:","SELECT Cyclist 
+FROM table_204_552 
+ORDER BY Rank ASC 
+LIMIT 1;",Iryna Shpylova,Iryna Shpylova,True,True,4.787567615509033
+nt-40,deepseek-coder:6.7b,few-shot,what was the number of silver medals won by ukraine?,table_203_175,"['Rank', 'Nation', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+========================================
+Example 1
+
+Table: table_example_1
+
+Columns:
+Player, Goals, Team
+
+Question:
+Which player scored the most goals?
+
+SQL:
+SELECT Player
+FROM table_example_1
+ORDER BY Goals DESC
+LIMIT 1;
+
+========================================
+Example 2
+
+Table: table_example_2
+
+Columns:
+Country, Population
+
+Question:
+Which country has population greater than 1000000?
+
+SQL:
+SELECT Country
+FROM table_example_2
+WHERE Population > 1000000;
+
+========================================
+Example 3
+
+Table: table_example_3
+
+Columns:
+Year, Winner
+
+Question:
+Who won in 2010?
+
+SQL:
+SELECT Winner
+FROM table_example_3
+WHERE Year = 2010;
+
+========================================
+
+Now solve the following task.
+
+Database schema:
+
+Table: table_203_175
+
+Columns:
+Rank, Nation, Gold, Silver, Bronze, Total
+
+User question:
+what was the number of silver medals won by ukraine?
+
+SQL:","SELECT Silver 
+FROM table_203_175 
+WHERE Nation = 'Ukraine';",,2,True,False,4.16289210319519

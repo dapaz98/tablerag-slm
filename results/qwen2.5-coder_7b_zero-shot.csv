@@ -1,0 +1,327 @@
+question_id,model_name,prompt_method,question,table_name,columns,prompt,generated_sql,predicted_answer,gold_answer,execution_success,correct,latency_seconds
+nt-2,qwen2.5-coder:7b,zero-shot,which team won previous to crettyard?,table_204_772,"['Team', 'County', 'Wins', 'Years_won']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_204_772
+
+            Columns:
+            Team, County, Wins, Years_won
+
+            User question:
+            which team won previous to crettyard?
+
+            SQL:",SELECT Team FROM table_204_772 WHERE Team < 'Crettyard' ORDER BY Team DESC LIMIT 1,Confey,Wolfe Tones,True,False,12.497038125991821
+nt-3,qwen2.5-coder:7b,zero-shot,how many more passengers flew to los angeles than to saskatoon from manzanillo airport in 2013?,table_203_515,"['Rank', 'City', 'Passengers', 'Ranking', 'Airline']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_515
+
+            Columns:
+            Rank, City, Passengers, Ranking, Airline
+
+            User question:
+            how many more passengers flew to los angeles than to saskatoon from manzanillo airport in 2013?
+
+            SQL:","```sql
+SELECT (SELECT SUM(Passengers) FROM table_203_515 WHERE City = 'Los Angeles' AND Ranking = 'Manzanillo' AND SUBSTR(Airline, -4) = '2013') -
+       (SELECT SUM(Passengers) FROM table_203_515 WHERE City = 'Saskatoon' AND Ranking = 'Manzanillo' AND SUBSTR(Airline, -4) = '2013') AS Difference
+```",,"12,467",True,False,15.889952421188354
+nt-8,qwen2.5-coder:7b,zero-shot,"after winning on four credits with a full house, what is your payout?",table_203_564,"['Hand', '1_credit', '2_credits', '3_credits', '4_credits', '5_credits']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_564
+
+            Columns:
+            Hand, 1_credit, 2_credits, 3_credits, 4_credits, 5_credits
+
+            User question:
+            after winning on four credits with a full house, what is your payout?
+
+            SQL:","```sql
+SELECT 4_credits AS payout FROM table_203_564 WHERE Hand = 'Full House';
+```",,32,True,False,5.009814739227295
+nt-9,qwen2.5-coder:7b,zero-shot,which players played the same position as ardo kreek?,table_203_116,"['No.', 'Player', 'Birth_Date', 'Weight', 'Height', 'Position', 'Current_Club']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_116
+
+            Columns:
+            No., Player, Birth_Date, Weight, Height, Position, Current_Club
+
+            User question:
+            which players played the same position as ardo kreek?
+
+            SQL:",SELECT Player FROM table_203_116 WHERE Position = (SELECT Position FROM table_203_116 WHERE Player = 'ardo kreek') AND Player != 'ardo kreek',,Siim Ennemuist|Andri Aganits,True,False,7.038294315338135
+nt-14,qwen2.5-coder:7b,zero-shot,which athlete was from south korea after the year 2010?,table_203_104,"['Athlete', 'Nation', 'Olympics', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_104
+
+            Columns:
+            Athlete, Nation, Olympics, Gold, Silver, Bronze, Total
+
+            User question:
+            which athlete was from south korea after the year 2010?
+
+            SQL:",SELECT Athlete FROM table_203_104 WHERE Nation = 'South Korea' AND Olympics > '2010',,Kim Yu-na,True,False,4.911580801010132
+nt-15,qwen2.5-coder:7b,zero-shot,what was the venue when he placed first?,table_204_706,"['Year', 'Competition', 'Venue', 'Position', 'Notes']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_204_706
+
+            Columns:
+            Year, Competition, Venue, Position, Notes
+
+            User question:
+            what was the venue when he placed first?
+
+            SQL:",SELECT Venue FROM table_204_706 WHERE Position = 1 LIMIT 1,,"New Delhi, India",True,False,3.6271016597747803
+nt-24,qwen2.5-coder:7b,zero-shot,who ranked right after turkey?,table_203_812,"['Rank', 'Nation', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_812
+
+            Columns:
+            Rank, Nation, Gold, Silver, Bronze, Total
+
+            User question:
+            who ranked right after turkey?
+
+            SQL:",SELECT Nation FROM table_203_812 WHERE Rank = (SELECT Rank + 1 FROM table_203_812 WHERE Nation = 'Turkey'),Sweden,Sweden,True,True,5.736443519592285
+nt-29,qwen2.5-coder:7b,zero-shot,what is the total population in dzhebariki-khaya?,table_204_6,"['Urban_settlements', 'Population', 'Male', 'Female', 'Inhabited_localities_in_jurisdiction']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_204_6
+
+            Columns:
+            Urban_settlements, Population, Male, Female, Inhabited_localities_in_jurisdiction
+
+            User question:
+            what is the total population in dzhebariki-khaya?
+
+            SQL:",SELECT SUM(Population) FROM table_204_6 WHERE Urban_settlements = 'Dzhebariki-Khaya',None,1694,True,False,5.172821998596191
+nt-34,qwen2.5-coder:7b,zero-shot,who was the top ranked competitor in this race?,table_204_552,"['Rank', 'Cyclist', 'Team', 'Laps\ndown', 'Notes']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_204_552
+
+            Columns:
+            Rank, Cyclist, Team, Laps
+down, Notes
+
+            User question:
+            who was the top ranked competitor in this race?
+
+            SQL:",SELECT Cyclist FROM table_204_552 ORDER BY Rank ASC LIMIT 1,Iryna Shpylova,Iryna Shpylova,True,True,3.5648016929626465
+nt-40,qwen2.5-coder:7b,zero-shot,what was the number of silver medals won by ukraine?,table_203_175,"['Rank', 'Nation', 'Gold', 'Silver', 'Bronze', 'Total']","You are an expert Text-to-SQL assistant.
+
+                    Your task is to generate a syntactically correct SQLite SQL query based ONLY on the provided schema and question.
+
+                    Rules:
+                    - Return ONLY the SQL query.
+                    - Do NOT include explanations, markdown, comments, or extra text.
+                    - Use ONLY tables and columns present in the schema.
+                    - Do NOT invent column names or table names.
+                    - If the question cannot be answered using the schema, return exactly:
+                    CANNOT_ANSWER
+                    - Generate valid SQLite syntax only.
+                    - Prefer explicit column names instead of SELECT *.
+                    - Use table aliases when helpful.
+                    - If aggregation is needed, use proper GROUP BY clauses.
+                    - If filtering text, use LIKE for partial matches when appropriate.
+                    - Handle NULL values safely when relevant.
+                    - Use LIMIT when the question asks for top/best/highest/lowest results.
+                    - For date comparisons, use SQLite-compatible date functions only.
+                
+
+            Database schema:
+
+            Table: table_203_175
+
+            Columns:
+            Rank, Nation, Gold, Silver, Bronze, Total
+
+            User question:
+            what was the number of silver medals won by ukraine?
+
+            SQL:",SELECT Silver FROM table_203_175 WHERE Nation = 'Ukraine',,2,True,False,3.60076642036438

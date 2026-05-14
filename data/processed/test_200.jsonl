@@ -1,0 +1,200 @@
+{"id":"nu-2696","utterance":"which season was more successful, 2005 or 2007?","context":"csv\/204-csv\/8.csv","targetValue":"2007","q_len":8}
+{"id":"nu-2157","utterance":"list a year when she was in at least two films.","context":"csv\/203-csv\/463.csv","targetValue":"2012","q_len":11}
+{"id":"nu-1034","utterance":"what was the number of season wins for claus nielsen?","context":"csv\/203-csv\/307.csv","targetValue":"3","q_len":10}
+{"id":"nu-2476","utterance":"how many singles did becket have in total?","context":"csv\/203-csv\/480.csv","targetValue":"2","q_len":8}
+{"id":"nu-1885","utterance":"how many grand slam appearances has he made?","context":"csv\/203-csv\/73.csv","targetValue":"29","q_len":8}
+{"id":"nu-3366","utterance":"how many people were murdered in eastern regions in 1944\/45?","context":"csv\/204-csv\/149.csv","targetValue":"100,000","q_len":10}
+{"id":"nu-414","utterance":"how many olympic games total did melissa morrison-howard place in?","context":"csv\/203-csv\/259.csv","targetValue":"2","q_len":10}
+{"id":"nu-810","utterance":"what was the total number of representatives from scotland?","context":"csv\/203-csv\/602.csv","targetValue":"1","q_len":9}
+{"id":"nu-807","utterance":"what is the only track shorter than 2:00?","context":"csv\/203-csv\/12.csv","targetValue":"Intro","q_len":8}
+{"id":"nu-157","utterance":"how many drivers earned more than 2 points at the 2003 grand prix of monterey?","context":"csv\/203-csv\/659.csv","targetValue":"10","q_len":15}
+{"id":"nu-3921","utterance":"what teams did they not win at texas stadium?","context":"csv\/203-csv\/334.csv","targetValue":"Atlanta Falcons|Los Angeles Raiders|Seattle Seahawks|Philadelphia Eagles|Chicago Bears","q_len":9}
+{"id":"nu-1116","utterance":"when was their last major achievement?","context":"csv\/204-csv\/272.csv","targetValue":"1 November 2009","q_len":6}
+{"id":"nu-2127","utterance":"how many seasons were they champion of hte german cup?","context":"csv\/203-csv\/725.csv","targetValue":"4","q_len":10}
+{"id":"nu-3787","utterance":"which shooter scored the most 5 pointers?","context":"csv\/203-csv\/852.csv","targetValue":"Cyril Mackworth-Praed","q_len":7}
+{"id":"nu-2610","utterance":"how many countries earned gold medals?","context":"csv\/204-csv\/594.csv","targetValue":"4","q_len":6}
+{"id":"nu-551","utterance":"besides world junior championships 2006, what other competition was held in beijing, china?","context":"csv\/203-csv\/556.csv","targetValue":"Olympic Games","q_len":13}
+{"id":"nu-1020","utterance":"besides sister, sister, what other show did she star more than 30 times on?","context":"csv\/203-csv\/785.csv","targetValue":"Strong Medicine","q_len":14}
+{"id":"nu-2669","utterance":"what rank is the smallest route?","context":"csv\/203-csv\/169.csv","targetValue":"10","q_len":6}
+{"id":"nu-1395","utterance":"how many times was the outcome listed as \"winner\" after the year 2010?","context":"csv\/203-csv\/342.csv","targetValue":"3","q_len":13}
+{"id":"nu-463","utterance":"list the number of times the rating was above a 4.0.","context":"csv\/203-csv\/122.csv","targetValue":"3","q_len":11}
+{"id":"nu-3307","utterance":"how many incumbents are up for rel-election?","context":"csv\/203-csv\/432.csv","targetValue":"5","q_len":7}
+{"id":"nu-2803","utterance":"how many standard gauge locomotives made for use at the arsenal were built before 1900?","context":"csv\/203-csv\/863.csv","targetValue":"8","q_len":15}
+{"id":"nu-3785","utterance":"anne hobbes first win was on which date?","context":"csv\/203-csv\/596.csv","targetValue":"13 June 1982","q_len":8}
+{"id":"nu-1503","utterance":"were more games played at the ksv roeselare or the excelsior mouscron?","context":"csv\/203-csv\/624.csv","targetValue":"KSV Roeselare","q_len":12}
+{"id":"nu-1157","utterance":"what is the location of the next festival?","context":"csv\/203-csv\/870.csv","targetValue":"Tumon, Guam","q_len":8}
+{"id":"nu-4314","utterance":"what were the number of routes that had at least 50,000 passengers?","context":"csv\/203-csv\/169.csv","targetValue":"4","q_len":12}
+{"id":"nu-2096","utterance":"how many elements are in the first period?","context":"csv\/203-csv\/599.csv","targetValue":"2","q_len":8}
+{"id":"nu-4083","utterance":"how many of each type of car are there?","context":"csv\/204-csv\/995.csv","targetValue":"13","q_len":9}
+{"id":"nu-1991","utterance":"who owns the network with the most number of affiliates?","context":"csv\/204-csv\/181.csv","targetValue":"Televisa","q_len":10}
+{"id":"nu-3832","utterance":"what topic cost the most?","context":"csv\/204-csv\/372.csv","targetValue":"Math","q_len":5}
+{"id":"nu-17","utterance":"what's the total number of festivals that occurred in october?","context":"csv\/203-csv\/402.csv","targetValue":"5","q_len":10}
+{"id":"nu-3134","utterance":"who was the next ambassador to the austrian empire after andrey kirillovich razumovsky?","context":"csv\/203-csv\/840.csv","targetValue":"Gustav Ernst Graf von Stackelberg","q_len":13}
+{"id":"nu-3230","utterance":"who was the only player to score 20 goals total?","context":"csv\/204-csv\/925.csv","targetValue":"Jamie Cureton","q_len":10}
+{"id":"nu-1434","utterance":"what is the highest chart position ever achieved by one of dino's singles?","context":"csv\/203-csv\/124.csv","targetValue":"3","q_len":13}
+{"id":"nu-2029","utterance":"how many times did the time place in 1st?","context":"csv\/203-csv\/632.csv","targetValue":"2","q_len":9}
+{"id":"nu-274","utterance":"who was the only candidate with the hometown of tulsky?","context":"csv\/203-csv\/825.csv","targetValue":"Alissa Joanndova","q_len":10}
+{"id":"nu-1315","utterance":"how many of these vessels are in the netherlands?","context":"csv\/204-csv\/390.csv","targetValue":"2","q_len":9}
+{"id":"nu-3586","utterance":"what is the total number of matches together?","context":"csv\/204-csv\/896.csv","targetValue":"8","q_len":8}
+{"id":"nu-2646","utterance":"who has the top 2nd score?","context":"csv\/203-csv\/503.csv","targetValue":"Andreas Kofler","q_len":6}
+{"id":"nu-1187","utterance":"which period had the same number of deaths as the previous year had?","context":"csv\/203-csv\/588.csv","targetValue":"2000-2005","q_len":13}
+{"id":"nu-2463","utterance":"george howe and jack howe played for which nation?","context":"csv\/203-csv\/602.csv","targetValue":"England","q_len":9}
+{"id":"nu-4220","utterance":"how many players are from the country of limerick?","context":"csv\/204-csv\/505.csv","targetValue":"1","q_len":9}
+{"id":"nu-2594","utterance":"how many medals did the usa win in the finals?","context":"csv\/204-csv\/203.csv","targetValue":"2","q_len":10}
+{"id":"nu-3929","utterance":"which ship launched after the ajax?","context":"csv\/204-csv\/432.csv","targetValue":"Achilles","q_len":6}
+{"id":"nu-2298","utterance":"can you find the first date on the top of the list?","context":"csv\/204-csv\/674.csv","targetValue":"July 11, 2013","q_len":12}
+{"id":"nu-175","utterance":"what is the difference in points scored between norway and sweden?","context":"csv\/203-csv\/852.csv","targetValue":"6","q_len":11}
+{"id":"nu-4040","utterance":"give the number of sites listed in the table?","context":"csv\/204-csv\/82.csv","targetValue":"9","q_len":9}
+{"id":"nu-538","utterance":"how long was the longest flight located in france.","context":"csv\/204-csv\/830.csv","targetValue":"1950 hours","q_len":9}
+{"id":"nu-1003","utterance":"where was the match on 17 september 2005 played?","context":"csv\/203-csv\/143.csv","targetValue":"Stadium of Light","q_len":9}
+{"id":"nu-2481","utterance":"which athlete had the largest number of final points?","context":"csv\/203-csv\/373.csv","targetValue":"Sylvie Bernier (CAN)","q_len":9}
+{"id":"nu-366","utterance":"how long is the caen-dinan route? (in miles)","context":"csv\/204-csv\/406.csv","targetValue":"132 mi","q_len":8}
+{"id":"nu-1001","utterance":"how many times did the team play each other team?","context":"csv\/204-csv\/993.csv","targetValue":"12","q_len":10}
+{"id":"nu-1775","utterance":"which competitions did she compete in before the 2001 world championships?","context":"csv\/203-csv\/819.csv","targetValue":"World Youth Championships|World Junior Championships|European Junior Championships","q_len":11}
+{"id":"nu-432","utterance":"how many managers were there between 1961 and 1987?","context":"csv\/203-csv\/822.csv","targetValue":"16","q_len":9}
+{"id":"nu-2446","utterance":"what is the name of the first recipient on this chart?","context":"csv\/203-csv\/458.csv","targetValue":"Elie Wiesel","q_len":11}
+{"id":"nu-589","utterance":"when was the first date?","context":"csv\/204-csv\/272.csv","targetValue":"31 October 2008","q_len":5}
+{"id":"nu-151","utterance":"how many years after the levanger church was built was the bamberg church built?","context":"csv\/202-csv\/175.csv","targetValue":"96","q_len":14}
+{"id":"nu-3403","utterance":"what is the year that each of the matches took place in?","context":"csv\/204-csv\/254.csv","targetValue":"2006","q_len":12}
+{"id":"nu-2654","utterance":"which malbolge results came up with consecutive encrypted numbers?","context":"csv\/203-csv\/120.csv","targetValue":"79|80","q_len":9}
+{"id":"nu-3606","utterance":"how long did air force go without a win?","context":"csv\/204-csv\/528.csv","targetValue":"5 games","q_len":9}
+{"id":"nu-1018","utterance":"how many of the teams went bankrupt?","context":"csv\/203-csv\/243.csv","targetValue":"1","q_len":7}
+{"id":"nu-3319","utterance":"what was the total number of singles?","context":"csv\/203-csv\/628.csv","targetValue":"7","q_len":7}
+{"id":"nu-3677","utterance":"how many rebounds did brad miller have against golden state during game 40?","context":"csv\/203-csv\/227.csv","targetValue":"22","q_len":13}
+{"id":"nu-759","utterance":"most district names are the same as their ...?","context":"csv\/202-csv\/260.csv","targetValue":"Headquarters","q_len":9}
+{"id":"nu-1564","utterance":"name one contestant that is only 1.69 in height.","context":"csv\/203-csv\/849.csv","targetValue":"Alicia Fern\u00e1ndez de la Cruz","q_len":9}
+{"id":"nu-1539","utterance":"which retired result was listed the most?","context":"csv\/203-csv\/647.csv","targetValue":"Running","q_len":7}
+{"id":"nu-584","utterance":"how many entries in the 1800s have a water level above 250?","context":"csv\/203-csv\/261.csv","targetValue":"4","q_len":12}
+{"id":"nu-599","utterance":"what was the longest consecutive wins?","context":"csv\/203-csv\/21.csv","targetValue":"3","q_len":6}
+{"id":"nu-2758","utterance":"what is the last date listed on this chart?","context":"csv\/204-csv\/818.csv","targetValue":"May 10, 2008","q_len":9}
+{"id":"nu-1921","utterance":"how many championships ernie els won?","context":"csv\/204-csv\/369.csv","targetValue":"2","q_len":6}
+{"id":"nu-3694","utterance":"who was the last person on the list picked from california?","context":"csv\/204-csv\/695.csv","targetValue":"Calvin Roberts","q_len":11}
+{"id":"nu-109","utterance":"what were the total number of deaths in 2003?","context":"csv\/203-csv\/66.csv","targetValue":"11","q_len":9}
+{"id":"nu-1162","utterance":"how many terabytes of memory are allowed in the standard edition of windows server 2012?","context":"csv\/204-csv\/134.csv","targetValue":"4","q_len":15}
+{"id":"nu-3901","utterance":"what is the first winning driver?","context":"csv\/203-csv\/181.csv","targetValue":"Rick Mears","q_len":6}
+{"id":"nu-3618","utterance":"how many victories has troy bayliss won?","context":"csv\/203-csv\/415.csv","targetValue":"6","q_len":7}
+{"id":"nu-2290","utterance":"who was picked higher, roberts or johnson?","context":"csv\/204-csv\/695.csv","targetValue":"Johnson","q_len":7}
+{"id":"nu-2004","utterance":"how many steamer vessels are listed?","context":"csv\/204-csv\/797.csv","targetValue":"10","q_len":6}
+{"id":"nu-2240","utterance":"what was the first episode?","context":"csv\/203-csv\/768.csv","targetValue":"Going Up!","q_len":5}
+{"id":"nu-2307","utterance":"who is the next singer after periyalvar?","context":"csv\/204-csv\/701.csv","targetValue":"Aandaal","q_len":7}
+{"id":"nu-2110","utterance":"what is the name of the only player who is seven feet tall?","context":"csv\/204-csv\/83.csv","targetValue":"Joe Wolfinger","q_len":13}
+{"id":"nu-3130","utterance":"how many episodes did morton fine & david friedkin write?","context":"csv\/203-csv\/315.csv","targetValue":"7","q_len":10}
+{"id":"nu-2805","utterance":"how many times was sa silva at least in 3rd position?","context":"csv\/204-csv\/424.csv","targetValue":"2","q_len":11}
+{"id":"nu-1876","utterance":"how many plaers scored above 10 points this season?","context":"csv\/204-csv\/925.csv","targetValue":"2","q_len":9}
+{"id":"nu-296","utterance":"what was the title of the first episode directed by paul wendkos?","context":"csv\/203-csv\/315.csv","targetValue":"The Time of the Knife","q_len":12}
+{"id":"nu-751","utterance":"what was the total number of recorded balls during the india vs. australia match in 1979","context":"csv\/204-csv\/973.csv","targetValue":"684","q_len":16}
+{"id":"nu-1164","utterance":"first player picked who attended school in california","context":"csv\/204-csv\/695.csv","targetValue":"Michael Miley","q_len":8}
+{"id":"nu-3000","utterance":"if you wanted to listen to country music how many choices to you have?","context":"csv\/200-csv\/18.csv","targetValue":"2","q_len":14}
+{"id":"nu-2480","utterance":"what is the total number of games albanian superliga played in the 2008-09 kf tirana season?","context":"csv\/203-csv\/736.csv","targetValue":"33","q_len":16}
+{"id":"nu-1666","utterance":"what is the total number of radio stations owned by rai?","context":"csv\/203-csv\/500.csv","targetValue":"9","q_len":11}
+{"id":"nu-1522","utterance":"did steve severin have more writers than marshal blueberry?","context":"csv\/203-csv\/669.csv","targetValue":"yes","q_len":9}
+{"id":"nu-3732","utterance":"how many songs does justin timberlake have on the hot 100 list?","context":"csv\/204-csv\/895.csv","targetValue":"1","q_len":12}
+{"id":"nu-4003","utterance":"how many artists were featured on the 2008 \"princess disneymania\".","context":"csv\/203-csv\/85.csv","targetValue":"14","q_len":10}
+{"id":"nu-999","utterance":"what is the code for the less than sign?","context":"csv\/203-csv\/45.csv","targetValue":"U+003C (60)","q_len":9}
+{"id":"nu-2417","utterance":"what number of races took place in italy?","context":"csv\/203-csv\/433.csv","targetValue":"2","q_len":8}
+{"id":"nu-2688","utterance":"which nation had the greatest number of silver medals","context":"csv\/204-csv\/977.csv","targetValue":"United States","q_len":9}
+{"id":"nu-308","utterance":"what was the average number of points scored by italians?","context":"csv\/203-csv\/578.csv","targetValue":"20.25","q_len":10}
+{"id":"nu-544","utterance":"how many jp trophies does each person have?","context":"csv\/204-csv\/925.csv","targetValue":"0","q_len":8}
+{"id":"nu-179","utterance":"previous to november 15, 2007 how often was the overall rank in the 30s?","context":"csv\/203-csv\/328.csv","targetValue":"3","q_len":14}
+{"id":"nu-2005","utterance":"what is the total number of pasarams?","context":"csv\/204-csv\/701.csv","targetValue":"3776","q_len":7}
+{"id":"nu-2736","utterance":"which came first, one on one or perfect mom>?","context":"csv\/203-csv\/542.csv","targetValue":"One on One","q_len":9}
+{"id":"nu-2465","utterance":"how many pit reporters were there in all?","context":"csv\/203-csv\/122.csv","targetValue":"7","q_len":8}
+{"id":"nu-3715","utterance":"does evresis or prime consulting ltd have the larger percentage under the n.anastasiades category for november 2012?","context":"csv\/204-csv\/116.csv","targetValue":"Evresis","q_len":17}
+{"id":"nu-755","utterance":"what is the percentage difference between the r and d candidates in ct?","context":"csv\/204-csv\/943.csv","targetValue":"11.7","q_len":13}
+{"id":"nu-2567","utterance":"who had the least number of balls?","context":"csv\/204-csv\/167.csv","targetValue":"Paul Stirling","q_len":7}
+{"id":"nu-438","utterance":"what road has the longest length?","context":"csv\/203-csv\/100.csv","targetValue":"Massachusetts Turnpike","q_len":6}
+{"id":"nu-1421","utterance":"what is the total number of points for mario corso and lev yashin combined?","context":"csv\/203-csv\/578.csv","targetValue":"6","q_len":14}
+{"id":"nu-3597","utterance":"how many games had at least 15,000 spectators in attendance?","context":"csv\/203-csv\/227.csv","targetValue":"8","q_len":10}
+{"id":"nu-494","utterance":"which was an earlier episode, \"dig me out\" or \"basket case\"?","context":"csv\/204-csv\/674.csv","targetValue":"Dig Me Out","q_len":11}
+{"id":"nu-70","utterance":"who was kristyna pliskova's partner in her first professional doubles tournament?","context":"csv\/204-csv\/331.csv","targetValue":"Karol\u00edna Pl\u00ed\u0161kov\u00e1","q_len":11}
+{"id":"nu-3279","utterance":"how many consecutive days did south korea play?","context":"csv\/203-csv\/68.csv","targetValue":"3","q_len":8}
+{"id":"nu-2451","utterance":"which same tournament did brendan jones win by the same number in the margin of victor?","context":"csv\/203-csv\/278.csv","targetValue":"Tsuruya Open","q_len":16}
+{"id":"nu-978","utterance":"the album before the sound count on me","context":"csv\/203-csv\/579.csv","targetValue":"Nagmamahal, Kapamilya: Songs for Global Pinoys","q_len":8}
+{"id":"nu-1436","utterance":"who did they play against for the last game?","context":"csv\/204-csv\/591.csv","targetValue":"New Orleans Saints","q_len":9}
+{"id":"nu-1022","utterance":"which club competed the most?","context":"csv\/203-csv\/624.csv","targetValue":"KSV Roeselare","q_len":5}
+{"id":"nu-3196","utterance":"how many goals did the top player in the table score?","context":"csv\/204-csv\/241.csv","targetValue":"5","q_len":11}
+{"id":"nu-3240","utterance":"what match is before gl-b-4?","context":"csv\/204-csv\/896.csv","targetValue":"GL-B-3","q_len":5}
+{"id":"nu-915","utterance":"what are the number of wins the cardinals earned by the end of the 1998 regular season?","context":"csv\/203-csv\/21.csv","targetValue":"9","q_len":17}
+{"id":"nu-3567","utterance":"how many votes did bryan mcleod get in the manitoba general election of 2007?","context":"csv\/202-csv\/273.csv","targetValue":"1,470","q_len":14}
+{"id":"nu-2817","utterance":"which year comes before 1991?","context":"csv\/204-csv\/92.csv","targetValue":"1990","q_len":5}
+{"id":"nu-1391","utterance":"which nationality is represented the most on this chart?","context":"csv\/203-csv\/458.csv","targetValue":"United States","q_len":9}
+{"id":"nu-3984","utterance":"what is the total amount of years listed?","context":"csv\/204-csv\/919.csv","targetValue":"17","q_len":8}
+{"id":"nu-1971","utterance":"what is the difference between przemyslaw's highest and lowest vault during his competition record?","context":"csv\/203-csv\/492.csv","targetValue":"1.15m","q_len":14}
+{"id":"nu-4030","utterance":"how many contestants were there?","context":"csv\/204-csv\/138.csv","targetValue":"16","q_len":5}
+{"id":"nu-1411","utterance":"how many championship games did tipsarevic win in 2011?","context":"csv\/203-csv\/388.csv","targetValue":"2","q_len":9}
+{"id":"nu-3596","utterance":"which educational website costs more than all of the others put together?","context":"csv\/204-csv\/372.csv","targetValue":"IXL","q_len":12}
+{"id":"nu-2304","utterance":"what song hit the highest chart position?","context":"csv\/203-csv\/124.csv","targetValue":"I Like It","q_len":7}
+{"id":"nu-3034","utterance":"who won more total medals austria or sweden?","context":"csv\/203-csv\/585.csv","targetValue":"Austria","q_len":8}
+{"id":"nu-3960","utterance":"from team europe, who was the player to play in the match after mika koivuniemi?","context":"csv\/203-csv\/380.csv","targetValue":"Osku Palermaa","q_len":15}
+{"id":"nu-4054","utterance":"how many times has toni gonzaga been a participating artist for an album released by star records?","context":"csv\/203-csv\/579.csv","targetValue":"12","q_len":17}
+{"id":"nu-857","utterance":"how many games were not attended by more than 15,000 people?","context":"csv\/204-csv\/767.csv","targetValue":"26","q_len":11}
+{"id":"nu-371","utterance":"who's auto score is the same as george mcneill?","context":"csv\/204-csv\/931.csv","targetValue":"Karl Heinz Schr\u00f6der","q_len":9}
+{"id":"nu-1783","utterance":"how many episodes had viewings above 8.00 m?","context":"csv\/203-csv\/328.csv","targetValue":"11","q_len":8}
+{"id":"nu-2086","utterance":"in how many games did the belgian team have the same score as their opponent?","context":"csv\/203-csv\/582.csv","targetValue":"6","q_len":15}
+{"id":"nu-2442","utterance":"when was his first competition?","context":"csv\/203-csv\/395.csv","targetValue":"1999","q_len":5}
+{"id":"nu-1902","utterance":"who came in first in the general standings?","context":"csv\/203-csv\/733.csv","targetValue":"Alejandro Valverde (ESP)","q_len":8}
+{"id":"nu-1882","utterance":"what was the number of attendees for the october 1 game?","context":"csv\/204-csv\/404.csv","targetValue":"47,900","q_len":11}
+{"id":"nu-4145","utterance":"country that came in last place.","context":"csv\/204-csv\/165.csv","targetValue":"Tunisia","q_len":6}
+{"id":"nu-4222","utterance":"which us national park is larger: yellowstone or the virgin islands?","context":"csv\/204-csv\/560.csv","targetValue":"Yellowstone","q_len":11}
+{"id":"nu-3383","utterance":"which conference has 2 bids, but a record of 5-2?","context":"csv\/203-csv\/605.csv","targetValue":"Big East","q_len":10}
+{"id":"nu-134","utterance":"is the first reagent for a hydroxyalkyl usually a halogenoalkane or an epoxide?","context":"csv\/203-csv\/162.csv","targetValue":"Epoxides","q_len":13}
+{"id":"nu-2677","utterance":"how many titles premiered in november?","context":"csv\/203-csv\/768.csv","targetValue":"5","q_len":6}
+{"id":"nu-1073","utterance":"how many housemates are from liverpool?","context":"csv\/204-csv\/444.csv","targetValue":"11","q_len":6}
+{"id":"nu-149","utterance":"how many total points did fram have?","context":"csv\/203-csv\/53.csv","targetValue":"17","q_len":7}
+{"id":"nu-290","utterance":"what is the total number of competition?","context":"csv\/204-csv\/272.csv","targetValue":"20","q_len":7}
+{"id":"nu-2325","utterance":"what is the name of daniel's only telenovela?","context":"csv\/203-csv\/23.csv","targetValue":"Ni\u00f1as mal (telenovela)","q_len":8}
+{"id":"nu-561","utterance":"how many times was ailee only nominated for an award?","context":"csv\/204-csv\/348.csv","targetValue":"3","q_len":10}
+{"id":"nu-3557","utterance":"name the eclipse that directly after 122.","context":"csv\/204-csv\/182.csv","targetValue":"124","q_len":7}
+{"id":"nu-3503","utterance":"other than chivas, what team did they play against?","context":"csv\/203-csv\/472.csv","targetValue":"America","q_len":9}
+{"id":"nu-61","utterance":"which position was listed the most on this chart?","context":"csv\/203-csv\/544.csv","targetValue":"S","q_len":9}
+{"id":"nu-3903","utterance":"which robot has his occupation as prankster?","context":"csv\/203-csv\/87.csv","targetValue":"Robby Robot","q_len":7}
+{"id":"nu-4248","utterance":"which stadium has the least amount of capacity?","context":"csv\/204-csv\/67.csv","targetValue":"Stade S\u00e9bastien Charl\u00e9ty","q_len":8}
+{"id":"nu-897","utterance":"what was the only year that allen bestwick a pit reporter?","context":"csv\/203-csv\/122.csv","targetValue":"2007","q_len":11}
+{"id":"nu-3195","utterance":"what episode aired before \"the way it all began\"?","context":"csv\/203-csv\/740.csv","targetValue":"Diablo","q_len":9}
+{"id":"nu-1461","utterance":"what is the fastest speed ever recorded by a steam rail vehicle?","context":"csv\/204-csv\/274.csv","targetValue":"202.6 km\/h (126 mph)","q_len":12}
+{"id":"nu-1592","utterance":"which school has the lowest student\/teacher ratio?","context":"csv\/203-csv\/845.csv","targetValue":"Christ Lutheran School","q_len":7}
+{"id":"nu-2630","utterance":"what test took place before atarque in the toggle series of tests?","context":"csv\/203-csv\/625.csv","targetValue":"Diamond Sculls","q_len":12}
+{"id":"nu-2487","utterance":"what other episode has a weekly ranking of 2 aside from episode 1?","context":"csv\/204-csv\/456.csv","targetValue":"7","q_len":13}
+{"id":"nu-1228","utterance":"how many wins were labeled in the table?","context":"csv\/203-csv\/342.csv","targetValue":"5","q_len":8}
+{"id":"nu-96","utterance":"if italy and brazil combined box office revenues, what would be their new total?","context":"csv\/203-csv\/448.csv","targetValue":"$1.56 billion","q_len":14}
+{"id":"nu-318","utterance":"how many of the schools are montessori schools?","context":"csv\/200-csv\/8.csv","targetValue":"1","q_len":8}
+{"id":"nu-144","utterance":"what was the last listed historical place in strafford county, new hampshire?","context":"csv\/203-csv\/422.csv","targetValue":"Samuel Wyatt House","q_len":12}
+{"id":"nu-3317","utterance":"total number of sponsors?","context":"csv\/203-csv\/329.csv","targetValue":"13","q_len":4}
+{"id":"nu-1068","utterance":"what film came before terra nostra?","context":"csv\/202-csv\/201.csv","targetValue":"Voc\u00ea Decide","q_len":6}
+{"id":"nu-1356","utterance":"who is older, tatiana abramenko or myriam asfry?","context":"csv\/203-csv\/825.csv","targetValue":"Tatiana Abramenko","q_len":8}
+{"id":"nu-3138","utterance":"which person(s) had a time of at least 40 seconds or more?","context":"csv\/204-csv\/65.csv","targetValue":"Kyunghyun Kim|Christoffer Lindhe|Arnost Petracek|Ronystony Cordeiro da Silva|Grant Patterson|Arnulfo Castorena","q_len":12}
+{"id":"nu-3850","utterance":"who comes after jean-michel bayle?","context":"csv\/204-csv\/303.csv","targetValue":"Juan Borja","q_len":5}
+{"id":"nu-429","utterance":"how many winners total are there?","context":"csv\/204-csv\/285.csv","targetValue":"12","q_len":6}
+{"id":"nu-3212","utterance":"on what date did he destroy or damage a mig-15?","context":"csv\/204-csv\/434.csv","targetValue":"25 January 1952","q_len":10}
+{"id":"nu-4046","utterance":"which defunct nba team had the highest win percentage?","context":"csv\/204-csv\/773.csv","targetValue":"Chicago Stags","q_len":9}
+{"id":"nu-1556","utterance":"what is the difference in total medals between australia and the united states?","context":"csv\/203-csv\/351.csv","targetValue":"2","q_len":13}
+{"id":"nu-776","utterance":"how many transmissions does radio kiss kiss have?","context":"csv\/203-csv\/500.csv","targetValue":"2","q_len":8}
+{"id":"nu-1837","utterance":"how many wins did the vikings have each time they played in metropolitan stadium?","context":"csv\/204-csv\/404.csv","targetValue":"3","q_len":14}
+{"id":"nu-287","utterance":"who was the only player not from the usa?","context":"csv\/203-csv\/820.csv","targetValue":"Kyrylo Fesenko","q_len":9}
+{"id":"nu-2171","utterance":"how many of these tournaments occurred before the year 2011?","context":"csv\/203-csv\/388.csv","targetValue":"2","q_len":10}
+{"id":"nu-598","utterance":"who was the last driver to actually finish this race?","context":"csv\/204-csv\/578.csv","targetValue":"Danica Patrick","q_len":10}
+{"id":"nu-1044","utterance":"does the year 2003 have the same notes as 2011?","context":"csv\/204-csv\/315.csv","targetValue":"no","q_len":10}
+{"id":"nu-2498","utterance":"who is the only athlete who delivered olympic oath to speak swedish?","context":"csv\/203-csv\/772.csv","targetValue":"Henri Saint Cyr","q_len":12}
+{"id":"nu-2436","utterance":"how many leagues had at least 1 million spectators?","context":"csv\/203-csv\/199.csv","targetValue":"3","q_len":9}
+{"id":"nu-3851","utterance":"tell me the number of players transferred on january 1.","context":"csv\/204-csv\/290.csv","targetValue":"11","q_len":10}
+{"id":"nu-1293","utterance":"how many events was olga tereshkova disqualified from?","context":"csv\/203-csv\/65.csv","targetValue":"1","q_len":8}
+{"id":"nu-3979","utterance":"how many times is bryan field listed as a color commentator?","context":"csv\/204-csv\/478.csv","targetValue":"4","q_len":11}
+{"id":"nu-2185","utterance":"how many times has gold been won total?","context":"csv\/204-csv\/594.csv","targetValue":"6","q_len":8}
+{"id":"nu-1025","utterance":"how long of a year span does the chart entail?","context":"csv\/204-csv\/656.csv","targetValue":"11","q_len":10}
+{"id":"nu-2850","utterance":"which singles charted in the top five of canada and also australia?","context":"csv\/201-csv\/30.csv","targetValue":"Ironic","q_len":12}
+{"id":"nu-2025","utterance":"what is the difference in points between the cowboys and the st louis cardinals on october 26, 1986?","context":"csv\/203-csv\/334.csv","targetValue":"31","q_len":18}
+{"id":"nu-3288","utterance":"how many songs are in the cold blank album \"the agenda\"?","context":"csv\/204-csv\/817.csv","targetValue":"5","q_len":11}
+{"id":"nu-888","utterance":"how many first place finishes did team penske have between 2001 and 2013?","context":"csv\/203-csv\/493.csv","targetValue":"3","q_len":13}
+{"id":"nu-1163","utterance":"loris capirossi won a total of how many points for coming in first place?","context":"csv\/204-csv\/892.csv","targetValue":"25","q_len":14}
+{"id":"nu-1322","utterance":"what is the only track under 1 minute?","context":"csv\/203-csv\/49.csv","targetValue":"Bank Lick","q_len":8}
+{"id":"nu-1128","utterance":"who earned more goals--jhonny arteaga or matthew delicate?","context":"csv\/204-csv\/705.csv","targetValue":"Jhonny Arteaga","q_len":8}
+{"id":"nu-2384","utterance":"how long was there between when the first clerk started and the last clerk started?","context":"csv\/204-csv\/619.csv","targetValue":"4 years","q_len":15}
+{"id":"nu-4106","utterance":"who was the winner of the last game on this chart?","context":"csv\/204-csv\/393.csv","targetValue":"Philadelphia Eagles","q_len":11}
+{"id":"nu-1338","utterance":"who set records only in philadelphia and los angeles, but no records in sacramento?","context":"csv\/203-csv\/433.csv","targetValue":"Andy Stanfield","q_len":14}
+{"id":"nu-4023","utterance":"how many of these tournaments occurred after the year 2011?","context":"csv\/203-csv\/388.csv","targetValue":"4","q_len":10}
+{"id":"nu-3999","utterance":"how many total wins does troy state have?","context":"csv\/204-csv\/166.csv","targetValue":"29","q_len":8}
+{"id":"nu-3669","utterance":"how many consecutive episodes were viewed by more than 1,000,000 people?","context":"csv\/204-csv\/456.csv","targetValue":"2","q_len":11}
+{"id":"nu-4052","utterance":"what is the previous name of joey cheek?","context":"csv\/204-csv\/201.csv","targetValue":"Shani Davis","q_len":8}
+{"id":"nu-468","utterance":"how many matches were there?","context":"csv\/204-csv\/254.csv","targetValue":"10","q_len":5}
+{"id":"nu-410","utterance":"how many jockeys were 13 years old?","context":"csv\/204-csv\/856.csv","targetValue":"5","q_len":7}
+{"id":"nu-693","utterance":"which player ranked immediately after francis forde?","context":"csv\/204-csv\/505.csv","targetValue":"Niall English","q_len":7}

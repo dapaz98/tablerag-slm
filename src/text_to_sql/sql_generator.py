@@ -20,19 +20,19 @@ class SQLGenerator:
 
         response = ollama.chat(
 
-    model=self.model_name,
+        model=self.model_name,
 
-    options={
-        "temperature": 0
-    },
+        options={
+            "temperature": 0
+        },
 
-    messages=[
-        {
-            "role": "user",
-            "content": prompt
-        }
-    ]
-)
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    )
 
         sql_query = response["message"]["content"]
 

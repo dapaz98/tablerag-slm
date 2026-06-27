@@ -1,5 +1,5 @@
 import sqlite3
-
+import pandas as pd
 
 class SchemaExtractor:
 
@@ -36,3 +36,30 @@ class SchemaExtractor:
         ]
 
         return columns
+    
+
+
+    def get_sample_rows(
+        self,
+        table_name,
+        limit=3
+    ):
+
+        connection = sqlite3.connect(
+            self.database_path
+        )
+
+        query = f"""
+        SELECT *
+        FROM {table_name}
+        LIMIT {limit}
+        """
+
+        dataframe = pd.read_sql_query(
+            query,
+            connection
+        )
+
+        connection.close()
+
+        return dataframe

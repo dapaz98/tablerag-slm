@@ -17,21 +17,19 @@ class SQLExecutor:
         query
     ):
 
-        try:
+        conn = sqlite3.connect(
+            self.database_path
+        )
 
-            conn = sqlite3.connect(self.database_path)
+        try:
 
             result = pd.read_sql_query(
                 query,
                 conn
             )
 
-            conn.close()
-
             return result
 
-        except Exception as e:
+        finally:
 
-            print(f"SQL execution error: {e}")
-
-            return None
+            conn.close()

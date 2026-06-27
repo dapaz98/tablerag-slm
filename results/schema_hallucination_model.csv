@@ -1,0 +1,7 @@
+model_name,total_samples,schema_hallucinations,hallucination_rate
+llama-3.3-70b,5000,595,11.899999999999999
+llama3.2:3b,5000,495,9.9
+qwen2.5-coder:7b,5000,150,3.0
+deepseek-coder:6.7b,5000,129,2.58
+gemma4:e4b,5000,119,2.3800000000000003
+gpt-oss-120b,5000,44,0.88

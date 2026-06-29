@@ -26,23 +26,20 @@ load_dotenv()
 # CONFIG
 # =====================================
 
-# modelos que rodam via Together AI
 TOGETHER_MODELS = [
-    # "openai/gpt-oss-120b",
+    "openai/gpt-oss-120b",
     "meta-llama/Llama-3.3-70B-Instruct-Turbo"
 ]
 
-# todos os modelos — locais + API
 MODELS = [
-    # "llama3.2:3b",
-    # "deepseek-coder:6.7b",
-    # "qwen2.5-coder:7b",
+    "llama3.2:3b",
+    "deepseek-coder:6.7b",
+    "qwen2.5-coder:7b",
     "gemma4:e4b",
-    # "openai/gpt-oss-120b",
+    "openai/gpt-oss-120b",
     "meta-llama/Llama-3.3-70B-Instruct-Turbo"
 ]
 
-# nome curto para o CSV
 MODEL_DISPLAY_NAMES = {
     "openai/gpt-oss-120b": "gpt-oss-120b",
     "meta-llama/Llama-3.3-70B-Instruct-Turbo": "llama-3.3-70b",
@@ -56,7 +53,7 @@ PROMPT_METHODS = [
     "schema-linking"
 ]
 
-MAX_SAMPLES = 1000
+MAX_SAMPLES = 1
 
 DATASET_PATH = (
     "data/raw/WikiTableQuestions/"
@@ -181,11 +178,6 @@ for model_name in MODELS:
 
             generated_sql = None
 
-            # ==========================
-            # SKIP SE JÁ PROCESSADO
-            # usa display_name para consistência
-            # ==========================
-
             key = (
                 display_name,
                 prompt_method,
@@ -210,9 +202,6 @@ for model_name in MODELS:
 
                 retrieved_rows = None
 
-                # ======================
-                # BUILD PROMPT
-                # ======================
 
                 if prompt_method == "zero-shot":
 
@@ -304,15 +293,8 @@ for model_name in MODELS:
 
                     raise ValueError("Invalid PROMPT_METHOD.")
 
-                # ======================
-                # PROMPT METRICS
-                # ======================
 
                 prompt_tokens = len(prompt.split())
-
-                # ======================
-                # GENERATE SQL
-                # ======================
 
                 generation_start = time.time()
 
@@ -322,20 +304,12 @@ for model_name in MODELS:
 
                 latency_seconds = generation_end - generation_start
 
-                # ======================
-                # CLEAN SQL
-                # ======================
-
                 generated_sql = clean_sql(generated_sql)
 
                 sql_generated = (
                     generated_sql is not None
                     and generated_sql != ""
                 )
-
-                # ======================
-                # EXECUTE SQL
-                # ======================
 
                 execution_success = True
                 has_result        = False
@@ -356,9 +330,6 @@ for model_name in MODELS:
 
                     print(f"[EXECUTION ERROR] {e}")
 
-                # ======================
-                # PREDICTED ANSWER
-                # ======================
 
                 predicted_answer = None
 
@@ -370,19 +341,11 @@ for model_name in MODELS:
                     except Exception:
                         predicted_answer = None
 
-                # ======================
-                # FINAL EVALUATION
-                # ======================
-
                 is_correct = (
                     str(predicted_answer).strip().lower()
                     ==
                     str(gold_answer).strip().lower()
                 )
-
-                # ======================
-                # SAVE RESULT
-                # ======================
 
                 experiment = {
                     "question_id"      : question_id,
@@ -445,9 +408,6 @@ for model_name in MODELS:
                 save_results(results, RESULTS_PATH)
 
 
-# =====================================
-# FINAL SUMMARY
-# =====================================
 
 results_dataframe = pd.read_csv(RESULTS_PATH)
 

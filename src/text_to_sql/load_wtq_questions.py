@@ -71,14 +71,6 @@ class WTQQuestionLoader:
 
         gold_answer = row["targetValue"]
 
-        # Example:
-        # csv/204-csv/772.csv
-        # ->
-        # table_772
-
-        # table_id = Path(context).stem
-
-        # table_name = f"table_{table_id}"
         context_path = Path(context)
 
         folder_name = context_path.parent.name

@@ -48,9 +48,7 @@ if USE_RERANKER:
     reranker = TableReranker()
     print("Re-ranker loaded.")
 
-# =====================================
-# RUN RETRIEVAL WITH ADVANCED LOGGING (O código novo entra AQUI)
-# =====================================
+
 results = []
 print(f"\nIniciando busca para {MAX_SAMPLES} samples (reranker={USE_RERANKER})...")
 
@@ -61,19 +59,16 @@ for sample in questions[:MAX_SAMPLES]:
     question    = sample["question"]
     gold_table  = sample["table_id"]
 
-    # --- STEP 1: EMBEDDING RETRIEVAL (BI-ENCODER) ---
     t_start_emb = time.time()
     retrieved_tables = retriever.retrieve(question, top_k=RETRIEVAL_TOP_K)
     emb_latency_ms = (time.time() - t_start_emb) * 1000
 
-    # Verifica se o gold estava no retrieval inicial (Top 20)
     in_initial_retrieval = gold_table in retrieved_tables
     initial_rank = retrieved_tables.index(gold_table) + 1 if in_initial_retrieval else -1
 
     rerank_latency_ms = 0.0
     final_rank = -1
 
-    # --- STEP 2: RE-RANKING (CROSS-ENCODER) ---
     if USE_RERANKER:
         candidate_texts = [table_text_map.get(t, "") for t in retrieved_tables]
         
@@ -88,18 +83,15 @@ for sample in questions[:MAX_SAMPLES]:
     else:
         final_tables = retrieved_tables[:RERANK_TOP_K]
 
-    # Rank final após ordenação (Top 10)
     in_final_results = gold_table in final_tables
     if in_final_results:
         final_rank = final_tables.index(gold_table) + 1
 
-    # --- STEP 3: METRICS ---
     hit1 = OTTQAMetrics.hits_at_k(gold_table, final_tables, 1)
     hit5 = OTTQAMetrics.hits_at_k(gold_table, final_tables, 5)
     hit10 = OTTQAMetrics.hits_at_k(gold_table, final_tables, 10)
     mrr = OTTQAMetrics.reciprocal_rank(gold_table, final_tables)
 
-    # --- CLASSIFICAÇÃO QUALITATIVA DE ERRO ---
     error_type = "SUCCESS"
     if not in_final_results:
         if not in_initial_retrieval:
@@ -129,16 +121,12 @@ for sample in questions[:MAX_SAMPLES]:
 total_time_seconds = time.time() - start_retrieval_loop
 avg_latency_ms = (total_time_seconds / MAX_SAMPLES) * 1000
 
-# =====================================
-# SAVE CSV (Salva o arquivo rico em dados)
-# =====================================
+
 results_df = pd.DataFrame(results)
 Path("results").mkdir(exist_ok=True)
 results_df.to_csv(RESULTS_PATH, index=False)
 
-# =====================================
-# SUMMARY (O print final continua funcionando)
-# =====================================
+
 print("\n====================")
 print("FINAL RESULTS")
 print("====================")

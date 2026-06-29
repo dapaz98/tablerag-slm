@@ -97,6 +97,26 @@ python -m src.pipeline.run_ottqa_pipeline
 python -m src.pipeline.run_wtq_pipeline
 ```
 
+### Running generated SQL queries (optional)
+
+To manually inspect or execute the generated SQL queries against the database:
+
+```bash
+sqlite3 data/databases/wikitablequestions.db
+```
+
+Then run any SQL query directly in the SQLite shell:
+
+```sql
+SELECT * FROM some_table WHERE condition;
+```
+
+To exit:
+
+```bash
+.quit
+```
+
 ---
 
 ## Results and Analysis
